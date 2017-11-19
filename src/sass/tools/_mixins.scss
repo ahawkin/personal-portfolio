@@ -1,0 +1,26 @@
+@mixin Gradient {
+    background: $primary1;
+    background: -moz-linear-gradient(left, $primary1 0%, $primary2 100%);
+    background: -webkit-linear-gradient(left, $primary1 0%,$primary2 100%);
+    background: linear-gradient(to right, $primary1 0%,$primary2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$primary1, endColorstr=$primary2, GradientType=1 );
+}
+
+@mixin GradientVertical {
+    background: $primary1;
+    background: -moz-linear-gradient(top, $primary1 0%, $primary2 100%);
+    background: -webkit-linear-gradient(top, $primary1 0%,$primary2 100%);
+    background: linear-gradient(to bottom, $primary1 0%,$primary2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$primary1, endColorstr=$primary2, GradientType=0 );
+}
+
+@mixin SmoothTranslate {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
+    -moz-transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
+    -o-transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
+    -ms-transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
+    transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
+}
