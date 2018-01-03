@@ -14,10 +14,6 @@
 
             &:hover {
                 background-color:transparent;
-
-                .icon-bar {
-                    background-color: $white;
-                }
             }
 
             &:focus {
@@ -31,6 +27,7 @@
 
                 &--close {
                     color: $primary2;
+                    margin-right: 1px;
                 }
 
                 i {
