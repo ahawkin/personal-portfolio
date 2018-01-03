@@ -1,8 +1,10 @@
 # Personal Portfolio
 
-WIP - Todo:
-- Remove `react-bootstrap` and other unnecessary packages
+Todo:
+- ~~Remove `react-bootstrap`~~
+- Remove other unnecessary packages
 - Finish content
 - Mobile support
+    - ~~Navigation~~
 - Setup lint command
 - Unit tests

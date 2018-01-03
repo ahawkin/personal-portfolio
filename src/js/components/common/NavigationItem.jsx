@@ -14,7 +14,7 @@ const NavigationItem = (props) => {
   }
 
   return (
-    <li className={props.active ? 'active' : ''}>
+    <li>
       <a href={props.to}>
         <i className={props.icon} />
         {props.name}
@@ -26,14 +26,12 @@ const NavigationItem = (props) => {
 NavigationItem.propTypes = {
   external: PropTypes.bool,
   to: PropTypes.string.isRequired,
-  active: PropTypes.bool,
   icon: PropTypes.string,
   name: PropTypes.string,
 };
 
 NavigationItem.defaultProps = {
   external: false,
-  active: false,
   icon: '',
   name: '',
 };

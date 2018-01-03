@@ -10,6 +10,8 @@
 
         .navbar-toggle {
             border:none;
+            z-index: 9999;
+
             &:hover {
                 background-color:transparent;
 
@@ -22,48 +24,40 @@
                 background-color: transparent;
             }
 
-            .icon-bar {
-                background-color: $white;
+
+            &__icon {
+                display: block;
+                color: $white;
+                margin-top: -6px;
+
+                &--close {
+                    color: $primary2;
+                }
+
+                i {
+                    font-size: 24px;
+                }
             }
         }
     }
 
     .navbar-nav {
         li {
-            &.active {
-                a {
-                    color: $white;
-                    opacity: 1;
-                    background-color: transparent;
-
-                    &:hover {
-                        color: $white;
-                        opacity: 1;
-                        background-color: transparent;
-                    }
-                }
-    
-            }
             a {
                 color: $white;
                 background-color: transparent;
-                opacity: 0.7;
                 font-size: 18px;
-        
 
-                &:hover {
+                &:hover,
+                &:focus {
+                    background-color: transparent;
                     color: $white;
-                    opacity: 1;
                 }
             }
+
             i {
                 font-size: 24px;
                 color: $white;
-                opacity: 0.7;
-
-                &:hover {
-                    opacity:1;
-                }
             }
         }
     }
@@ -71,6 +65,42 @@
     .navbar-collapse {
         border:none;
         box-shadow: none;
+
+        @media (max-width: $breakpoint-small) {
+            &--hide {
+                display: none;
+            }
+
+            &--show {
+                position: absolute;
+                top: 11px;
+                margin: 0;
+                width: 180px;
+                right: 11px;
+                display: block;
+                background: $white;
+                border-radius: 4px;
+                box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+
+                .navbar-nav {
+                    li {
+                        &.active {
+                            a {
+                                color: $black;
+                            }
+                        }
+
+                        a {
+                            color: $black;
+                        }
+
+                        i {
+                            color: $black;
+                        }
+                    }
+                }            
+            }
+        }
     }
 
     .navbar-brand {

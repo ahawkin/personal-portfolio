@@ -42,7 +42,7 @@ const PortfolioAbout = () => (
     </div>
     <div className="row">
       <h3 className="heading-charlie">Contact</h3>
-      <a className="btn btn--primary btn--inline" href="https://www.linkedin.com/in/adamhawkin">Linkin <i className="btn__icon fa fa-linkedin-square" /></a>
+      <a className="btn btn--primary btn--inline" href="https://www.linkedin.com/in/adamhawkin">Linkedin <i className="btn__icon fa fa-linkedin-square" /></a>
       <a className="btn btn--primary btn--inline" href="https://github.com/ahawkin">Github <i className="btn__icon fa fa-github-square" /></a>
       <a className="btn btn--primary" href="mailto:adamhawkin@hotmail.co.uk">Email <i className="btn__icon fa fa-envelope" /></a>
     </div>
