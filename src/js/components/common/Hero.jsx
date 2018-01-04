@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Hero = (props) => {
-  const slopes = props.slopes;
-  const type = props.type;
+  const {
+    slopes, type, heading, children,
+  } = props;
 
   const renderSlopes = () => {
     if (slopes) {
@@ -24,10 +25,10 @@ const Hero = (props) => {
     <section className="hero">
       <div className={`hero__wrapper hero__wrapper--${type}`}>
         <div className="hero__content container">
-          <h1 className="heading-alpha hero__heading">{props.heading}</h1>
+          <h1 className="heading-alpha hero__heading">{heading}</h1>
           <div className="divider divider--dark divider--hero" />
           <p className="hero__tagline">
-            {props.children}
+            {children}
           </p>
         </div>
       </div>

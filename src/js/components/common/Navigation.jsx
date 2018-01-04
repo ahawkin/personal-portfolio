@@ -2,8 +2,8 @@ import React from 'react';
 import NavigationItem from './NavigationItem';
 
 export default class Navigation extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       toggled: false,

@@ -1,27 +1,50 @@
 import React from 'react';
 import PortfolioCard from './PortfolioCard';
+import PortfolioTagList from './PortfolioTagList';
+import ProjectsData from '../../../data/projects.json';
 
-const PortfolioCardList = () => (
-  <section className="portfolio__list container">
-    <div className="row">
-      <div className="col-md-12">
-        <h2 className="heading-bravo portfolio__heading">Portfolio</h2>
-        <div className="divider divider--light divider--right" />
-      </div>
-    </div>
-    <div className="row">
-      <PortfolioCard image="./assets/img/test.png" imageAlt="test" to="#test">
-        <h4 className="heading-delta">Foo</h4>
-        <p>Foo, bar, Foobar</p>
-        <i className="fa fa-arrow-right" />
-      </PortfolioCard>
-      <PortfolioCard image="./assets/img/test.png" imageAlt="test" to="#test">
-        <h4 className="heading-delta">Foo</h4>
-        <p>Foo, bar, Foobar</p>
-        <i className="fa fa-arrow-right" />
-      </PortfolioCard>
-    </div>
-  </section>
-);
+export default class PortfolioCardList extends React.Component {
+  constructor() {
+    super();
 
-export default PortfolioCardList;
+    this.state = {
+      projects: ProjectsData,
+    };
+  }
+
+  renderProjects() {
+    console.log(this.state.projects);
+
+    return (
+      this.state.projects.map(project => (
+        <PortfolioCard
+          key={project.id}
+          image={project.image.src}
+          imageAlt={project.image.alt}
+          to={project.link}
+        >
+          <h4 className="heading-delta">{project.title}</h4>
+          <p>{project.description}</p>
+          <PortfolioTagList tags={project.tags} />
+          <i className="fa fa-arrow-right" />
+        </PortfolioCard>
+      ))
+    );
+  }
+
+  render() {
+    return (
+      <section className="portfolio__list container">
+        <div className="row">
+          <div className="col-md-12">
+            <h2 className="heading-bravo portfolio__heading">Portfolio</h2>
+            <div className="divider divider--light divider--right" />
+          </div>
+        </div>
+        <div className="row">
+          {this.renderProjects()}
+        </div>
+      </section>
+    );
+  }
+}

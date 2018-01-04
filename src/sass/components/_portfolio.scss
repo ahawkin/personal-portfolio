@@ -109,4 +109,15 @@
           float: none;
       }
     }
+
+    &__taglist {
+        &__item {
+            color: $black;
+            border: 1px solid $primary1;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 25px 10px 0 0;
+            display: inline-block;
+        }
+    }
 }
