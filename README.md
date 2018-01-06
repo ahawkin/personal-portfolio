@@ -1,7 +1,7 @@
 # Personal Portfolio
 
 Todo:
-- Features
+- General
     - ~~React v16~~
     - Setup Webpack v3
         - ~~Dev~~
