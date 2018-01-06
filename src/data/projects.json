@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "RLNews",
-        "description": "Rugby League news aggregation website produced for my final project at University.",
+        "summary": "Rugby League news aggregation website produced for my final project at University.",
         "tags": [
             {
                 "id": 1,
@@ -19,62 +19,62 @@
         ],
         "image": {
             "src": "./assets/img/rlnews.png",
-            "alt": "rl news"
+            "alt": "Rugby league news website"
         },
         "link": "#"
     },
     {
         "id": 2,
-        "title": "RLNews",
-        "description": "Rugby League news aggregation website produced for my final project at University.",
+        "title": "Personal Portfolio",
+        "summary": "This website - Built to practice some React.js, Jest, SASS and try out GitHub Pages.",
         "tags": [
             {
                 "id": 1,
-                "name": "University"
+                "name": "React.js"
             },
             {
                 "id": 2,
-                "name": "C#"
+                "name": "SASS"
             },
             {
                 "id": 3,
-                "name": "ASP.Net MVC"
+                "name": "Jest"
             }
         ],
         "image": {
-            "src": "./assets/img/rlnews.png",
-            "alt": "rl news"
+            "src": "./assets/img/react.png",
+            "alt": "Personal portfolio website"
         },
-        "link": "#"
+        "link": "https://github.com/ahawkin/personal-portfolio"
     },
     {
         "id": 3,
-        "title": "RLNews",
-        "description": "Rugby League news aggregation website produced for my final project at University.",
+        "title": "Internet Technology Showcase",
+        "summary": "Developed for my Adv. web development module in my third year of University.",
         "tags": [
             {
                 "id": 1,
-                "name": "University"
+                "name": "OO PHP"
             },
             {
                 "id": 2,
-                "name": "C#"
+                "name": "CodeIgniter"
             },
             {
                 "id": 3,
-                "name": "ASP.Net MVC"
+                "name": "Bootstrap 3"
             }
         ],
         "image": {
-            "src": "./assets/img/rlnews.png",
-            "alt": "rl news"
+            "src": "./assets/img/foo.png",
+            "alt": "Internet technology showcase website"
         },
         "link": "#"
     },
     {
         "id": 4,
-        "title": "RLNews",
-        "description": "Rugby League news aggregation website produced for my final project at University.",
+        "title": "Tapfish",
+        "summary": "Tapfish is an Android game that was developed during my second year of University.",
         "tags": [
             {
                 "id": 1,
@@ -82,16 +82,16 @@
             },
             {
                 "id": 2,
-                "name": "C#"
+                "name": "Android"
             },
             {
                 "id": 3,
-                "name": "ASP.Net MVC"
+                "name": "Java"
             }
         ],
         "image": {
-            "src": "./assets/img/rlnews.png",
-            "alt": "rl news"
+            "src": "./assets/img/tapfish.png",
+            "alt": "Tapfish game"
         },
         "link": "#"
     }

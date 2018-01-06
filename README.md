@@ -10,6 +10,7 @@ Todo:
     - ~~Footer~~
 - Setup lint command
 - Unit tests using Jest and Enzyme
+- Deploy to GitHub Pages
 
 Future Ideas:
 - React Markdown

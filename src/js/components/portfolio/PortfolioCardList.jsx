@@ -13,8 +13,6 @@ export default class PortfolioCardList extends React.Component {
   }
 
   renderProjects() {
-    console.log(this.state.projects);
-
     return (
       this.state.projects.map(project => (
         <PortfolioCard
@@ -24,7 +22,7 @@ export default class PortfolioCardList extends React.Component {
           to={project.link}
         >
           <h4 className="heading-delta">{project.title}</h4>
-          <p>{project.description}</p>
+          <p>{project.summary}</p>
           <PortfolioTagList tags={project.tags} />
           <i className="fa fa-arrow-right" />
         </PortfolioCard>

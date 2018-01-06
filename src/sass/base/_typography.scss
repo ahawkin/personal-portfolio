@@ -9,6 +9,10 @@
 .heading-charlie {
     font-size: 36px;
     margin: 36px 0;
+
+    &--bottom-only {
+        margin: 0 0 36px;
+    }
 }
 
 .heading-delta {
