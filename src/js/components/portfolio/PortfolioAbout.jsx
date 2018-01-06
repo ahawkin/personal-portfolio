@@ -10,7 +10,7 @@ const PortfolioAbout = () => (
     </div>
     <div className="row">
       <div className="col-md-12">
-        <h3 className="heading-charlie heading-charlie--bottom-only">Introduction</h3>
+        <h3 className="heading-charlie heading-charlie--bottom">Introduction</h3>
         <p>
           I am currently working as a
           Developer for <a href="https://www.sky.com/">Sky UK</a> in
