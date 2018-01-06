@@ -15,12 +15,12 @@ const PortfolioAbout = () => (
           I am currently working as a
           Developer for <a href="https://www.sky.com/">Sky UK</a> in
           Leeds. In 2016, I graduated Leeds Beckett University with a
-          First-class honours in BSc Computing. During my time at
+          First-class honours degree in BSc Computing. During my time at
           University I also worked as a Junior Web Developer for Branded3,
           creating enterprise level CMS websites using Sitecore.
         </p>
         <br />
-        <a className="btn btn--primary" href="/cv.pdf">Download CV</a>
+        <a className="btn btn--primary" href="/assets/files/cv.pdf">Download CV</a>
       </div>
     </div>
     <div className="row">
