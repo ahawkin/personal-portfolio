@@ -1,17 +1,33 @@
 # Personal Portfolio
 
 Todo:
-- ~~Remove `react-bootstrap`~~
-- Remove other unnecessary packages
-- Finish content
-- Mobile support
-    - ~~Navigation~~
-    - Body
-    - ~~Footer~~
-- Setup lint command
-- Unit tests using Jest and Enzyme
-- Deploy to GitHub Pages
-
-Future Ideas:
-- React Markdown
-- CMS / API Driven
+- Features
+    - ~~React v16~~
+    - Setup Webpack v3
+        - ~~Dev~~
+        - Prod
+    - Fully responsive
+    - Smooth scroll to anchors
+- Content
+    - Portfolio tiles
+        - ~~Body~~
+        - Links
+    - ~~CV~~
+    - ~~About me~~
+- SEO
+    - Basic title and description
+    - Schema.org
+- Optimisation
+    - ~~Remove `react-bootstrap`~~
+    - Remove other unnecessary packages
+    - ~~Images~~
+    - Green Google Lighthouse scores
+- Linting
+    - ~~JS~~
+    - SASS
+    - Lint command
+- Testing
+    - Jest and Enzyme
+    - 100% coverage
+- Build
+    - Deploy to GitHub Pages
