@@ -20,7 +20,7 @@ const PortfolioAbout = () => (
           creating enterprise level CMS websites using Sitecore.
         </p>
         <br />
-        <a className="btn btn--primary" href="/assets/files/cv.pdf">Download CV</a>
+        <a className="btn btn--primary" href="/assets/files/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
       </div>
     </div>
     <div className="row">
