@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "RLNews",
-        "summary": "Rugby League news aggregation website produced for my final project at University.",
+        "summary": "Rugby League news aggregation website developed for my final project at University.",
         "tags": [
             {
                 "id": 1,
@@ -21,7 +21,7 @@
             "src": "./assets/img/rlnews.png",
             "alt": "Rugby league news website"
         },
-        "link": "#"
+        "link": "https://github.com/ahawkin/rlnews"
     },
     {
         "id": 2,
@@ -93,6 +93,6 @@
             "src": "./assets/img/tapfish.png",
             "alt": "Tapfish game"
         },
-        "link": "#"
+        "link": "https://github.com/ahawkin/tapfish"
     }
 ]
