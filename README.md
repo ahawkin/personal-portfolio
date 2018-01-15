@@ -20,7 +20,7 @@ Todo:
 - Optimisation
     - ~~Remove `react-bootstrap`~~
     - Remove other unnecessary packages
-    - ~~Images~~
+    - Images
     - Green Google Lighthouse scores
 - Linting
     - ~~JS~~
