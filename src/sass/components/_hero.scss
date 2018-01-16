@@ -4,7 +4,11 @@
             @include Gradient;
             width: 100%;
             margin-top: -90px;
-            padding: 265px 0 0 0;     
+            padding-top: 175px; 
+            
+            @media(min-width: $breakpoint-x-small) {
+                padding-top: 265px; 
+            }
         }
     }
 
@@ -45,8 +49,12 @@
             @include Gradient;
             height: 350px;
             width: 100%;
-            margin-top: -175px;
+            margin-top: -270px;
             position: relative;
+
+            @media(min-width: $breakpoint-x-small) {
+                margin-top: -175px;
+            }
 
             @media(min-width: $breakpoint-xx-large) {
                 height: 460px;

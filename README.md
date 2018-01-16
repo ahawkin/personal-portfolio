@@ -6,12 +6,12 @@ Todo:
     - Setup Webpack v3
         - ~~Dev~~
         - Prod
-    - Fully responsive
+    - ~~Fully responsive~~
     - Smooth scroll to anchors
 - Content
-    - Portfolio tiles
+    - ~~Portfolio tiles~~
         - ~~Body~~
-        - Links
+        - ~~Links~~
     - ~~CV~~
     - ~~About me~~
 - SEO
@@ -20,7 +20,7 @@ Todo:
 - Optimisation
     - ~~Remove `react-bootstrap`~~
     - Remove other unnecessary packages
-    - Images
+    - ~~Images~~
     - Green Google Lighthouse scores
 - Linting
     - ~~JS~~

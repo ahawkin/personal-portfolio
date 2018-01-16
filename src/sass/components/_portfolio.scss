@@ -84,6 +84,7 @@
 
             p {
               margin-top: 10px;
+              font-size: 15px;
             }
 
             i {
@@ -96,6 +97,10 @@
 
             @media(min-width: $breakpoint-x-small) {
                 margin-left: 141px;
+
+                p {
+                    font-size: inherit;
+                }
             }
         }
     }
@@ -111,8 +116,19 @@
     }
 
     &__taglist {
-        float: left;
-        margin-top: 14px;
+        display: none;
+
+        @media(min-width: $breakpoint-x-small) {
+            position: absolute;
+            display: inline;
+            left: 156px;
+            bottom: 13px;
+            font-size:14px;
+        }
+
+        @media(min-width: $breakpoint-small) {
+            font-size:18px;
+        }
 
         &__item {
             color: $black;
