@@ -49,27 +49,27 @@
     },
     {
         "id": 3,
-        "title": "Internet Technology Showcase",
-        "summary": "Developed for my Adv. web development module in my third year of University.",
+        "title": "Mandelbrot",
+        "summary": "C# Windows Forms Mandelbrot ported over from Java.",
         "tags": [
             {
                 "id": 1,
-                "name": "OO PHP"
+                "name": "University"
             },
             {
                 "id": 2,
-                "name": "CodeIgniter"
+                "name": "C#"
             },
             {
                 "id": 3,
-                "name": "Bootstrap 3"
+                "name": "WinForms"
             }
         ],
         "image": {
-            "src": "./assets/img/foo.png",
-            "alt": "Internet technology showcase website"
+            "src": "./assets/img/mandelbrot.png",
+            "alt": "Mandelbrot"
         },
-        "link": "#"
+        "link": "https://github.com/ahawkin/mandelbrot"
     },
     {
         "id": 4,

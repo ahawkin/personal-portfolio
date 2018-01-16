@@ -35,7 +35,7 @@ export default class PortfolioCardList extends React.Component {
       <section className="portfolio__list container">
         <div className="row">
           <div className="col-md-12">
-            <h2 className="heading-bravo portfolio__heading">Portfolio</h2>
+            <h2 className="heading-bravo portfolio__heading">Projects</h2>
             <div className="divider divider--light divider--right" />
           </div>
         </div>
