@@ -1,4 +1,5 @@
 import React from 'react';
+import scroll from 'smoothscroll-polyfill';
 import NavigationItem from './NavigationItem';
 
 export default class Navigation extends React.Component {
@@ -10,6 +11,7 @@ export default class Navigation extends React.Component {
     };
 
     this.toggleNavigation = this.toggleNavigation.bind(this);
+    this.smoothScroll = this.smoothScroll.bind(this);
   }
 
   toggleNavigation() {
@@ -18,6 +20,20 @@ export default class Navigation extends React.Component {
     }));
 
     console.log(this.state.toggled);
+  }
+
+  smoothScroll(event) {
+    scroll.polyfill();
+    const sectionId = `${event.currentTarget.id}-section`;
+    const element = document.getElementById(sectionId.toLowerCase());
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest',
+      });
+    }
   }
 
   renderButtonIcon() {
@@ -48,8 +64,8 @@ export default class Navigation extends React.Component {
           </div>
           <div id="navbar" className={this.state.toggled ? 'navbar-collapse navbar-collapse--show' : 'navbar-collapse navbar-collapse--hide'}>
             <ul className="nav navbar-nav">
-              <NavigationItem to="#portfolio" name="Portfolio" />
-              <NavigationItem to="#about" name="About" />
+              <NavigationItem to="#projects" name="Projects" handleEvent={this.smoothScroll} />
+              <NavigationItem to="#about" name="About" handleEvent={this.smoothScroll} />
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <NavigationItem to="http://uk.linkedin.com/in/adamhawkin" icon="fa fa-linkedin-square" external />
