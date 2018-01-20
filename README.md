@@ -25,7 +25,7 @@ Installing global dependencies
 - 100% coverage
 
 ## Linting
-Run eslint and sass-lint
+Run `eslint` and `sass-lint`
 
     npm run lint
 
