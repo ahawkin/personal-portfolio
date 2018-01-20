@@ -41,6 +41,16 @@
         margin-right: 10px;
     }
 
+    &--last {
+        margin-top: 10px;
+    }
+
+    @media(min-width: 408px) {
+        &--last {
+            margin-top: 0;
+        }
+    }
+
     &:hover {
         -webkit-transform: translateY(-2px);
         transform: translateY(-2px);
