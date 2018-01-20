@@ -30,5 +30,5 @@ Todo:
     - Jest and Enzyme
     - 100% coverage
 - Build
-    - CI intergration
+    - CI integration
     - Deploy to GitHub Pages
