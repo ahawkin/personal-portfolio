@@ -21,7 +21,7 @@ Todo:
     - ~~Remove `react-bootstrap`~~
     - ~~Remove other unnecessary packages~~
     - ~~Images~~
-    - Green Google Lighthouse scores
+    - ~~Green Google Lighthouse performance~~
 - Linting
     - ~~JS~~
     - SASS
