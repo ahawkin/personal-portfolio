@@ -4,12 +4,17 @@ var webpack = require('webpack')
 var path = require('path')
 
 module.exports = {
+  devtool: 'cheap-module-source-map',
   entry: {
     app: './src/js'
   },
   output: {
     path: path.resolve(__dirname, 'dist/js'),
     filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: ['node_modules', path.resolve(__dirname, 'src/js')]
   },
   module: {
     rules: [
@@ -29,10 +34,30 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+          warnings: false,
+          screw_ie8: true,
+          conditionals: true,
+          unused: true,
+          comparisons: true,
+          sequences: true,
+          dead_code: true,
+          evaluate: true,
+          if_return: true,
+          join_vars: true
+      },
+      output: {
+          comments: false
+      }
+    }),
     new ExtractTextPlugin({
       filename: '../css/styles.min.css',
       allChunks: true
-    }),
-    new webpack.NamedModulesPlugin()
+    })
   ]
 }
