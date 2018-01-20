@@ -24,7 +24,7 @@ const PortfolioHome = () => (
       My name is <strong>Adam Hawkin</strong>. <br />
       I&apos;m a Software Engineer from Wakefield. <br />
       <a
-        href="#portfolio"
+        href="#projects"
         onClick={() => smoothScroll()}
         className="btn btn--primary btn--inverted"
       >

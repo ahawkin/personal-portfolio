@@ -23,6 +23,4 @@ const copyFiles = () => {
 
 copyFiles().then(() => {
   console.log('Files copied.');
-}).catch((err) => {
-  console.error('Error copying files: ', err);
 });

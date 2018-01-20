@@ -1,9 +1,9 @@
 body {
-    font-family: $font-primary;
-    font-size: 18px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-primary;
+  font-size: 18px;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -12,54 +12,55 @@ h3,
 h4,
 h5,
 h6, {
-    margin: 0;
+  margin: 0;
 }
 
 a {
-    color: $primary1;
+  color: $primary1;
 
-    &:hover, :focus {
-        color: $primary2;
-    }
+  &:hover,
+  :focus {
+    color: $primary2;
+  }
 }
 
 p {
-    font-size: 1.1em;
-    line-height: 1.5em;
+  font-size: 1.1em;
+  line-height: 1.5em;
 }
 
 .divider {
-    display: block;
-    height: 2px;
-    width: 60px;
-    border-radius: 4px;
-    margin: 56px 0 56px;
+  border-radius: 4px;
+  display: block;
+  height: 2px;
+  margin: 56px 0;
+  width: 60px;
 
-    &--light {
-        background-color: $primary1;
-    }
+  &--light {
+    background-color: $primary1;
+  }
 
-    &--dark {
-        background-color: $primary2;
-    }
+  &--dark {
+    background-color: $primary2;
+  }
 
-    &--hero {
-        margin: 45px 0 45px;
-    }
-    
-    &--right {
-        float: right;
-        clear: right;
-    }
+  &--hero {
+    margin: 45px 0;
+  }
 
-    &--center {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  &--right {
+    clear: right;
+    float: right;
+  }
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 1600px) {
-    .container{
-        width: 1366px;
-    }
+  .container {
+    width: 1366px;
+  }
 }

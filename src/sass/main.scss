@@ -1,16 +1,15 @@
-/* Base Styles */
-@import "base/colours";
-@import "base/skin";
-@import "base/typography";
+// Base
+@import 'base/colours';
+@import 'base/skin';
+@import 'base/typography';
 
-/* Tools */
-@import "tools/mixins";
-@import "tools/utils";
+// Tools
+@import 'tools/mixins';
 
-/* Component Styles */
-@import "components/core";
-@import "components/navigation";
-@import "components/footer";
-@import "components/hero";
-@import "components/buttons";
-@import "components/portfolio";
+// Components
+@import 'components/core';
+@import 'components/navigation';
+@import 'components/footer';
+@import 'components/hero';
+@import 'components/buttons';
+@import 'components/portfolio';

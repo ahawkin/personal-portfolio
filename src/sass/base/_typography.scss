@@ -1,24 +1,24 @@
 .heading-alpha {
-    font-size: 62px;
+  font-size: 62px;
 }
 
 .heading-bravo {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 .heading-charlie {
-    font-size: 36px;
-    margin: 36px 0;
+  font-size: 36px;
+  margin: 36px 0;
 
-    &--bottom {
-        margin: 0 0 36px;
-    }
+  &--bottom {
+    margin: 0 0 36px;
+  }
 }
 
 .heading-delta {
-    font-size: 20px;
+  font-size: 20px;
 
-    @media(min-width: $breakpoint-x-small) {
-        font-size: 28px;
-    }
+  @media(min-width: $breakpoint-x-small) {
+    font-size: 28px;
+  }
 }

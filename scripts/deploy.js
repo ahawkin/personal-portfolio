@@ -4,7 +4,7 @@ const deploy = () => {
   console.log('\nDeploying to GitHub Pages...');
 
   ghpages.publish('dist', {
-    message: 'New build deployed: http://adamhawkin.co.uk/',
+    message: 'New build deployed -> http://adamhawkin.co.uk/',
     branch: 'gh-pages',
     repo: 'https://github.com/ahawkin/personal-portfolio.git',
   }, (err) => {

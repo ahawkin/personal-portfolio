@@ -1,140 +1,143 @@
+$box-shadow-colour-start: rgba(0 , 0, 0, .08);
+$box-shadow-colour-end: rgba(0, 0, 0, .07);
+
 .portfolio {
-    margin-bottom: 112px;
+  margin-bottom: 112px;
 
-    &__list,
-    &__about {
-        margin: 56px auto 0;
+  &__list,
+  &__about {
+    margin: 56px auto 0;
+  }
+
+  &__card {
+    @include smooth-translate;
+    margin-bottom: 36px;
+
+    @media(min-width: $breakpoint-x-small) {
+      min-height: 56px;
     }
 
-    &__card {
-        margin-bottom: 36px;
-        @include SmoothTranslate;
-
-        @media(min-width: $breakpoint-x-small) {
-            min-height: 56px;
-        }
-
-        &__content {
-            display: block;
-            border-radius: 4px;
-            box-shadow: 0 7.5px 35px rgba(0 , 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.07);
-            transition: all .2s ease;
-            position: relative;
-            min-height: 163px;
-            color: $black;
-
-            &::before {
-                @include GradientVertical;
-                border-top-right-radius: 4px;
-                border-bottom-right-radius: 4px;
-                content: '';
-                height: 100%;
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 2px;
-            }
-
-            &:hover {
-                color: $black;
-                -webkit-transform: translateY(-3px);
-                transform: translateY(-3px);
-                box-shadow: 0 12.5px 35px rgba(0, 0, 0, 0.08), 0 8px 15px rgba(0, 0, 0, 0.07);
-                text-decoration: none;
-            }   
-
-            &:active {
-                color: $black;
-                background-color: $light-grey;
-                -webkit-transform: translateY(2px);
-                transform: translateY(2px);
-                box-shadow: 0 7.5px 35px rgba(0 , 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.07);
-                text-decoration: none;
-            } 
-
-            &:focus {
-                color: $black;
-                text-decoration: none;
-            }
-
-            @media(min-width: $breakpoint-x-small) {
-                min-height: 200px;
-            }
-        }
-
-        &__img {
-            padding:0;
-            width: 115px;
-            float: left;
-
-            img {
-                border-top-left-radius: 4px;
-                border-bottom-left-radius: 4px;
-            }
-
-            @media(min-width: $breakpoint-x-small) {
-                width: 141px;
-            }
-        }
-
-        &__body {
-            padding: 15px;
-            margin-left: 115px;
-            position: initial;
-
-            p {
-              margin-top: 10px;
-              font-size: 15px;
-            }
-
-            i {
-              float: right;
-              position: absolute;
-              right: 15px;
-              bottom: 15px;
-              font-size: 22px;
-            }
-
-            @media(min-width: $breakpoint-x-small) {
-                margin-left: 141px;
-
-                p {
-                    font-size: inherit;
-                }
-            }
-        }
-    }
-
-    &__heading {
+    &__content {
+      border-radius: 4px;
+      box-shadow: 0 7.5px 35px $box-shadow-colour-start, 0 5px 15px $box-shadow-colour-end;
+      color: $black;
       display: block;
-      float: right;
-      clear: right;
+      min-height: 163px;
+      position: relative;
+      transition: all .2s ease;
 
-      &--left {
-          float: none;
+      &::before {
+        @include gradient-vertical;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
+        content: '';
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 2px;
+      }
+
+      &:hover {
+        -webkit-transform: translateY(-3px);
+        box-shadow: 0 12.5px 35px $box-shadow-colour-start, 0 8px 15px $box-shadow-colour-end;
+        color: $black;
+        text-decoration: none;
+        transform: translateY(-3px);
+      }
+
+      &:active {
+        -webkit-transform: translateY(2px);
+        background-color: $light-grey;
+        box-shadow: 0 7.5px 35px $box-shadow-colour-start, 0 5px 15px $box-shadow-colour-end;
+        color: $black;
+        text-decoration: none;
+        transform: translateY(2px);
+      }
+
+      &:focus {
+        color: $black;
+        text-decoration: none;
+      }
+
+      @media(min-width: $breakpoint-x-small) {
+        min-height: 200px;
       }
     }
 
-    &__taglist {
-        display: none;
+    &__img {
+      float: left;
+      padding: 0;
+      width: 115px;
 
-        @media(min-width: $breakpoint-x-small) {
-            position: absolute;
-            display: inline;
-            left: 156px;
-            bottom: 13px;
-            font-size:14px;
-        }
+      img {
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+      }
 
-        @media(min-width: $breakpoint-small) {
-            font-size:18px;
-        }
-
-        &__item {
-            color: $black;
-            margin: 25px 15px 0 0;
-            display: inline-block;
-            opacity: 0.8;
-        }
+      @media(min-width: $breakpoint-x-small) {
+        width: 141px;
+      }
     }
+
+    &__body {
+      margin-left: 115px;
+      padding: 15px;
+      position: initial;
+
+      p {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      i {
+        bottom: 15px;
+        float: right;
+        font-size: 22px;
+        position: absolute;
+        right: 15px;
+      }
+
+      @media(min-width: $breakpoint-x-small) {
+        margin-left: 141px;
+
+        p {
+          font-size: inherit;
+        }
+      }
+    }
+  }
+
+  &__heading {
+    clear: right;
+    display: block;
+    float: right;
+
+    &--left {
+      float: none;
+    }
+  }
+
+  &__taglist {
+    display: none;
+
+    @media(min-width: $breakpoint-x-small) {
+      bottom: 13px;
+      display: inline;
+      font-size: 14px;
+      left: 156px;
+      position: absolute;
+    }
+
+    @media(min-width: $breakpoint-small) {
+      font-size: 18px;
+    }
+
+    &__item {
+      color: $black;
+      display: inline-block;
+      margin: 25px 15px 0 0;
+      opacity: .8;
+    }
+  }
 }
