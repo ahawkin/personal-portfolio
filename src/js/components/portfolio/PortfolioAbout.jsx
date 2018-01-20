@@ -22,7 +22,7 @@ const PortfolioAbout = () => (
         <br />
         <a
           className="btn btn--primary"
-          href="/assets/files/cv.pdf"
+          href="./assets/files/cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
