@@ -8,7 +8,7 @@ Todo:
         - Prod
     - ~~Fully responsive~~
     - ~~Smooth scroll to anchors~~
-- Content
+- ~~Content~~
     - ~~Portfolio tiles~~
         - ~~Body~~
         - ~~Links~~
@@ -19,7 +19,7 @@ Todo:
     - Schema.org
 - Optimisation
     - ~~Remove `react-bootstrap`~~
-    - Remove other unnecessary packages
+    - ~~Remove other unnecessary packages~~
     - ~~Images~~
     - Green Google Lighthouse scores
 - Linting
