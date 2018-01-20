@@ -1,11 +1,11 @@
 # Personal Portfolio
 
 Todo:
-- General
+- ~~General~~
     - ~~React v16~~
-    - Setup Webpack v3
+    - ~~Setup Webpack v3~~
         - ~~Dev~~
-        - Prod
+        - ~~Prod~~
     - ~~Fully responsive~~
     - ~~Smooth scroll to anchors~~
 - ~~Content~~
@@ -29,6 +29,5 @@ Todo:
 - Testing
     - Jest and Enzyme
     - 100% coverage
-- Build
-    - CI integration
+- ~~Build~~
     - ~~Deploy to GitHub Pages~~
