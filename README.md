@@ -14,10 +14,10 @@ Todo:
         - ~~Links~~
     - ~~CV~~
     - ~~About me~~
-- SEO
-    - Basic title and description
-    - Schema.org
-- Optimisation
+- ~~SEO~~
+    - ~~Basic title and description~~
+    - ~~Basic Schema.org~~
+- ~~Optimisation~~
     - ~~Remove `react-bootstrap`~~
     - ~~Remove other unnecessary packages~~
     - ~~Images~~
