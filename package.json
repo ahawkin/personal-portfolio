@@ -4,10 +4,10 @@
   "description": "Personal portfolio website",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.development.js",
-    "build": "npm run clean && webpack --config webpack.config.production.js --progress",
     "lint": "eslint ./src/js/**",
     "clean": "rimraf ./dist/*",
-    "deploy": "npm run lint && npm run build && node ./deploy.js"
+    "build": "npm run lint && npm run clean && webpack --config webpack.config.production.js --progress",
+    "deploy": "npm run build && node ./build-scripts/deploy.js"
   },
   "author": "Adam Hawkin",
   "license": "ISC",
