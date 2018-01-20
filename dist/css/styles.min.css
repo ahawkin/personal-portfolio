@@ -279,6 +279,13 @@ p {
 .btn--inline {
   margin-right: 10px; }
 
+.btn--last {
+  margin-top: 10px; }
+
+@media (min-width: 408px) {
+  .btn--last {
+    margin-top: 0; } }
+
 .btn:hover {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
