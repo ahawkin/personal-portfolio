@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Navigation from './common/Navigation';
 import PortfolioHome from './portfolio/PortfolioHome';
 import Footer from './common/Footer';
 
-const App = props => (
+const App = () => (
   <div>
     <header>
       <Navigation />

@@ -20,7 +20,14 @@ const PortfolioAbout = () => (
           creating enterprise level CMS websites using Sitecore.
         </p>
         <br />
-        <a className="btn btn--primary" href="/assets/files/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+        <a
+          className="btn btn--primary"
+          href="/assets/files/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download CV
+        </a>
       </div>
     </div>
     <div className="row">
@@ -47,7 +54,9 @@ const PortfolioAbout = () => (
         <h3 className="heading-charlie">Contact</h3>
         <a className="btn btn--primary btn--inline" href="https://www.linkedin.com/in/adamhawkin">Linkedin <i className="btn__icon fa fa-linkedin-square" /></a>
         <a className="btn btn--primary btn--inline" href="https://github.com/ahawkin">Github <i className="btn__icon fa fa-github-square" /></a>
-        <a className="btn btn--primary" href="mailto:adamhawkin@hotmail.co.uk">Email <i className="btn__icon fa fa-envelope" /></a>
+        <a className="btn btn--primary" href="mailto:adamhawkin@hotmail.co.uk">
+          Email <i className="btn__icon fa fa-envelope" />
+        </a>
       </div>
     </div>
   </section>

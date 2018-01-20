@@ -7,7 +7,7 @@ Todo:
         - ~~Dev~~
         - Prod
     - ~~Fully responsive~~
-    - Smooth scroll to anchors
+    - ~~Smooth scroll to anchors~~
 - Content
     - ~~Portfolio tiles~~
         - ~~Body~~
@@ -25,7 +25,7 @@ Todo:
 - Linting
     - ~~JS~~
     - SASS
-    - Lint command
+    - ~~Eslint command~~
 - Testing
     - Jest and Enzyme
     - 100% coverage
