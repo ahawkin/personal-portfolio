@@ -31,4 +31,4 @@ Todo:
     - 100% coverage
 - Build
     - CI integration
-    - Deploy to GitHub Pages
+    - ~~Deploy to GitHub Pages~~
