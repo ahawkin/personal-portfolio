@@ -1,30 +1,6 @@
 [
     {
         "id": 1,
-        "title": "RLNews",
-        "summary": "News aggregation website developed for my final project at University.",
-        "tags": [
-            {
-                "id": 1,
-                "name": "University"
-            },
-            {
-                "id": 2,
-                "name": "C#"
-            },
-            {
-                "id": 3,
-                "name": "ASP.Net MVC"
-            }
-        ],
-        "image": {
-            "src": "./assets/img/rlnews.png",
-            "alt": "Rugby league news website"
-        },
-        "link": "https://github.com/ahawkin/rlnews"
-    },
-    {
-        "id": 2,
         "title": "Personal Portfolio",
         "summary": "This website. Built to practice some React.js, Jest, SASS and try out GitHub Pages.",
         "tags": [
@@ -46,6 +22,30 @@
             "alt": "Personal portfolio website"
         },
         "link": "https://github.com/ahawkin/personal-portfolio"
+    },
+    {
+        "id": 2,
+        "title": "RLNews",
+        "summary": "News aggregation website developed for my final project at University.",
+        "tags": [
+            {
+                "id": 1,
+                "name": "University"
+            },
+            {
+                "id": 2,
+                "name": "C#"
+            },
+            {
+                "id": 3,
+                "name": "ASP.Net MVC"
+            }
+        ],
+        "image": {
+            "src": "./assets/img/rlnews.png",
+            "alt": "Rugby league news website"
+        },
+        "link": "https://github.com/ahawkin/rlnews"
     },
     {
         "id": 3,
