@@ -6,6 +6,7 @@ const copyFiles = () => {
   const index = fs.copy(path.resolve(__dirname, './index.html'), './dist/index.html');
   const favicon = fs.copy(path.resolve(__dirname, './assets/favicon.ico'), './dist/favicon.ico');
   const manifest = fs.copy(path.resolve(__dirname, './assets/manifest.json'), './dist/manifest.json');
+  const cname = fs.copy(path.resolve(__dirname, './assets/CNAME'), './dist/CNAME');
   const files = fs.copy(path.resolve(__dirname, './assets/files'), './dist/assets/files');
   const images = fs.copy(path.resolve(__dirname, './assets/img'), './dist/assets/img');
 
@@ -13,6 +14,7 @@ const copyFiles = () => {
     index,
     favicon,
     manifest,
+    cname,
     files,
     images,
   ]);
