@@ -9,7 +9,7 @@ module.exports = {
     app: './src/js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist/dist/js'),
+    path: path.resolve(__dirname, './../dist/js'),
     filename: 'bundle.js'
   },
   resolve: {
@@ -23,7 +23,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader'],
-          publicPath: path.resolve(__dirname, 'dist/dist/js')
+          publicPath: path.resolve(__dirname, 'dist/js')
         })
       },
       {

@@ -11,9 +11,9 @@ module.exports = {
     './src/js/index.jsx'
   ],
   output: {
-    path: path.resolve(__dirname, 'dist/js'),
+    path: path.resolve(__dirname, 'js'),
     filename: 'bundle.js',
-    publicPath: '/dist/js'
+    publicPath: 'js'
   },
   resolve: {
     extensions: ['.js', '.jsx'],

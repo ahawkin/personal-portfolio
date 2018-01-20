@@ -24,7 +24,6 @@ Todo:
     - ~~Green Google Lighthouse performance~~
 - Linting
     - ~~JS~~
-    - SASS
     - ~~Eslint command~~
 - Testing
     - Jest and Enzyme
