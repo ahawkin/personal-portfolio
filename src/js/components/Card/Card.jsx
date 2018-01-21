@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PortfolioCard = props => (
+const Card = props => (
   <div className="col-md-6 col-lg-6 portfolio__card">
     <a
       href={props.to}
@@ -19,11 +19,11 @@ const PortfolioCard = props => (
   </div>
 );
 
-PortfolioCard.propTypes = {
+Card.propTypes = {
   to: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 
-export default PortfolioCard;
+export default Card;

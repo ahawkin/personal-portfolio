@@ -1,6 +1,6 @@
 import React from 'react';
 import scroll from 'smoothscroll-polyfill';
-import NavigationItem from './NavigationItem';
+import NavigationItem from '../../components/Navigation/NavigationItem';
 
 const smoothScroll = (event) => {
   scroll.polyfill();

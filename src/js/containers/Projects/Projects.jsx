@@ -1,9 +1,9 @@
 import React from 'react';
-import PortfolioCard from './PortfolioCard';
-import PortfolioTagList from './PortfolioTagList';
+import Card from '../../components/Card/Card';
+import PortfolioTagList from '../../components/Tag/TagList';
 import ProjectsData from '../../../data/projects.json';
 
-export default class PortfolioCardList extends React.Component {
+export default class Projects extends React.Component {
   constructor() {
     super();
 
@@ -15,7 +15,7 @@ export default class PortfolioCardList extends React.Component {
   renderProjects() {
     return (
       this.state.projects.map(project => (
-        <PortfolioCard
+        <Card
           key={project.id}
           image={project.image.src}
           imageAlt={project.image.alt}
@@ -25,7 +25,7 @@ export default class PortfolioCardList extends React.Component {
           <p>{project.summary}</p>
           <PortfolioTagList tags={project.tags} />
           <i className="fa fa-arrow-right" />
-        </PortfolioCard>
+        </Card>
       ))
     );
   }

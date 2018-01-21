@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PortfolioAbout = () => (
+const About = () => (
   <section id="about-section" className="portfolio__about container">
     <div className="row">
       <div className="col-md-12">
@@ -66,4 +66,4 @@ const PortfolioAbout = () => (
   </section>
 );
 
-export default PortfolioAbout;
+export default About;

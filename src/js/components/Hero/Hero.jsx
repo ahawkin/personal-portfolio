@@ -1,25 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import HeroSlope from './HeroSlope';
 
 const Hero = (props) => {
-  const {
-    slopes, type, heading, children,
-  } = props;
-
-  const renderSlopes = () => {
-    if (slopes) {
-      return (
-        <div>
-          <span className="hero__slope hero__slope--first" />
-          <span className="hero__slope hero__slope--second" />
-          <span className="hero__slope hero__slope--third" />
-          <span className="hero__slope hero__slope--forth" />
-        </div>
-      );
-    }
-
-    return null;
-  };
+  const { type, heading, children } = props;
 
   return (
     <section className="hero">
@@ -32,7 +16,12 @@ const Hero = (props) => {
           </p>
         </div>
       </div>
-      {renderSlopes()}
+      <div>
+        <HeroSlope modifier="first" />
+        <HeroSlope modifier="second" />
+        <HeroSlope modifier="third" />
+        <HeroSlope modifier="forth" />
+      </div>
     </section>
   );
 };
@@ -40,13 +29,7 @@ const Hero = (props) => {
 Hero.propTypes = {
   heading: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  slopes: PropTypes.bool,
-  children: PropTypes.node,
-};
-
-Hero.defaultProps = {
-  slopes: false,
-  children: [],
+  children: PropTypes.node.isRequired,
 };
 
 export default Hero;
