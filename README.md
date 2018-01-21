@@ -1,6 +1,12 @@
 # Personal Portfolio
 
-http://adamhawkin.co.uk/
+My personal portfolio website running on GitHub Pages: http://adamhawkin.co.uk/
+
+Built with:
+- React.JS
+- SASS
+- Bootstrap 3
+- Webpack 3
 
 ## Requirements
 - Node ~8.9
