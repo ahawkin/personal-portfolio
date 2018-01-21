@@ -1,6 +1,5 @@
 import React from 'react';
-
-const currentYear = new Date().getFullYear();
+import currentYear from '../../helpers/currentYear';
 
 const Footer = () => (
   <footer className="footer">

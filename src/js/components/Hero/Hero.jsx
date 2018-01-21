@@ -1,21 +1,7 @@
 import React from 'react';
-import scroll from 'smoothscroll-polyfill';
 import HeroSlope from './HeroSlope';
 import Link from '../Link/Link';
-
-const smoothScroll = () => {
-  scroll.polyfill();
-
-  const element = document.getElementById('projects-section');
-
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
-  }
-};
+import smoothScroll from '../../helpers/smoothScroll';
 
 const Hero = () => (
   <section className="hero">
@@ -30,7 +16,7 @@ const Hero = () => (
             href="#projects"
             external={false}
             className="btn btn--primary btn--inverted"
-            onClick={() => smoothScroll()}
+            onClick={e => smoothScroll(e, 'projects-section')}
           >
             View Projects <i className="btn__icon fa fa-arrow-down" aria-hidden="true" />
           </Link>

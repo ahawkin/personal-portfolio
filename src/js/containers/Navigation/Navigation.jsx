@@ -1,26 +1,11 @@
 import React from 'react';
-import scroll from 'smoothscroll-polyfill';
 import Link from '../../components/Link/Link';
+import smoothScroll from '../../helpers/smoothScroll';
 import NavigationData from '../../../data/navigation.json';
 
-const smoothScroll = (event) => {
-  scroll.polyfill();
-
-  const sectionId = `${event.currentTarget.id}-section`;
-  const element = document.getElementById(sectionId.toLowerCase());
-
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
-  }
-};
-
 export default class Navigation extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       toggled: false,

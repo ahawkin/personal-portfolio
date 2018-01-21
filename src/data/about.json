@@ -1,0 +1,67 @@
+{
+  "introduction": "I am currently working as a Developer for Sky UK in Leeds. In 2016, I graduated Leeds Beckett University with a First-class honours degree in BSc Computing. During my time at University I also worked as a Junior Web Developer for Branded3, creating enterprise level CMS websites using Sitecore.",
+  "skills": {
+    "set1": [
+      {
+        "id": 1,
+        "name": "PHP"
+      },
+      {
+        "id": 2,
+        "name": "JavaScript"
+      },
+      {
+        "id": 3,
+        "name": "Node"
+      },
+      {
+        "id": 4,
+        "name": "C#"
+      }    
+    ],    
+    "set2": [
+      {
+        "id": 1,
+        "name": "ReactJS"
+      },
+      {
+        "id": 2,
+        "name": "HTML / CSS / SCSS"
+      },
+      {
+        "id": 3,
+        "name": "Web Development"
+      },
+      {
+        "id": 4,
+        "name": "Agile"
+      }    
+    ]
+  },
+  "contactLinks": [
+    {
+      "id": "Linkedin",
+      "href": "https://www.linkedin.com/in/adamhawkin",
+      "external": true,
+      "className": "btn btn--primary btn--inline",
+      "icon": "btn__icon fa fa-linkedin-square",
+      "content": "Linkedin"
+    },
+    {
+      "id": "Github",
+      "href": "https://github.com/ahawkin",
+      "external": true,
+      "className": "btn btn--primary btn--inline",
+      "icon": "btn__icon fa fa-github-square",
+      "content": "Github"
+    },
+    {
+      "id": "Email",
+      "href": "mailto:adamhawkin@hotmail.co.uk",
+      "external": false,
+      "className": "btn btn--primary btn--last",
+      "icon": "btn__icon fa fa-envelope",
+      "content": "Email"
+    }
+  ]
+}

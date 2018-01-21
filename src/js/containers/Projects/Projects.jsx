@@ -4,8 +4,8 @@ import TagList from '../../components/Tag/TagList';
 import ProjectsData from '../../../data/projects.json';
 
 export default class Projects extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       projects: ProjectsData,

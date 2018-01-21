@@ -1,69 +1,81 @@
 import React from 'react';
+import Link from '../../components/Link/Link';
+import AboutData from '../../../data/about.json';
 
-const About = () => (
-  <section id="about-section" className="portfolio__about container">
-    <div className="row">
-      <div className="col-md-12">
-        <h2 className="heading-bravo portfolio__heading--left">About Me</h2>
-        <div className="divider divider--light divider--left" />
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-md-12">
-        <h3 className="heading-charlie heading-charlie--bottom">Introduction</h3>
-        <p>
-          I am currently working as a
-          Developer for <a href="https://www.sky.com/">Sky UK</a> in
-          Leeds. In 2016, I graduated Leeds Beckett University with a
-          First-class honours degree in BSc Computing. During my time at
-          University I also worked as a Junior Web Developer for Branded3,
-          creating enterprise level CMS websites using Sitecore.
-        </p>
-        <br />
-        <a
-          className="btn btn--primary"
-          href="./assets/files/cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+export default class About extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      about: AboutData,
+    };
+  }
+
+  renderSkills(setId) {
+    return (
+      this.state.about.skills[setId].map(skill => (
+        <li key={skill.id}>{skill.name}</li>
+      ))
+    );
+  }
+
+  renderContactLinks() {
+    return (
+      this.state.about.contactLinks.map(contactLink => (
+        <Link
+          key={contactLink.id}
+          href={contactLink.href}
+          external={contactLink.external}
+          className={contactLink.className}
         >
-          Download CV
-        </a>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-md-6">
-        <h3 className="heading-charlie">Skills</h3>
-        <div className="col-md-6">
-          <ul>
-            <li>PHP</li>
-            <li>JavaScript</li>
-            <li>Node</li>
-            <li>C#</li>
-          </ul>
-        </div>
-        <div className="col-md-6">
-          <ul>
-            <li>ReactJS</li>
-            <li>HTML / CSS / SCSS</li>
-            <li>Web Development</li>
-            <li>Agile</li>
-          </ul>
-        </div>
-      </div>
-      <div className="col-md-6">
-        <h3 className="heading-charlie">Contact</h3>
-        <a className="btn btn--primary btn--inline" href="https://www.linkedin.com/in/adamhawkin" target="_blank" rel="noopener noreferrer">
-          Linkedin <i className="btn__icon fa fa-linkedin-square" />
-        </a>
-        <a className="btn btn--primary btn--inline" href="https://github.com/ahawkin" target="_blank" rel="noopener noreferrer">
-          Github <i className="btn__icon fa fa-github-square" />
-        </a>
-        <a className="btn btn--primary btn--last" href="mailto:adamhawkin@hotmail.co.uk">
-          Email <i className="btn__icon fa fa-envelope" />
-        </a>
-      </div>
-    </div>
-  </section>
-);
+          {contactLink.content}
+          {contactLink.icon ? <i className={contactLink.icon} /> : null}
+        </Link>
+      ))
+    );
+  }
 
-export default About;
+  render() {
+    return (
+      <section id="about-section" className="portfolio__about container">
+        <div className="row">
+          <div className="col-md-12">
+            <h2 className="heading-bravo portfolio__heading--left">About Me</h2>
+            <div className="divider divider--light divider--left" />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <h3 className="heading-charlie heading-charlie--bottom">Introduction</h3>
+            <p>
+              {this.state.about.introduction}
+            </p>
+            <br />
+            <Link href="./assets/files/cv.pdf" external className="btn btn--primary">
+              Download CV
+            </Link>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-6">
+            <h3 className="heading-charlie">Skills</h3>
+            <div className="col-md-6">
+              <ul>
+                {this.renderSkills('set1')}
+              </ul>
+            </div>
+            <div className="col-md-6">
+              <ul>
+                {this.renderSkills('set2')}
+              </ul>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <h3 className="heading-charlie">Contact</h3>
+            {this.renderContactLinks()}
+          </div>
+        </div>
+      </section>
+    );
+  }
+}
