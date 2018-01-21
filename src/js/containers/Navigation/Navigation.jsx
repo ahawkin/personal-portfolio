@@ -72,7 +72,7 @@ export default class Navigation extends React.Component {
           </div>
           <div id="navbar" className={this.state.toggled ? 'navbar-collapse navbar-collapse--show' : 'navbar-collapse navbar-collapse--hide'}>
             <ul className="nav navbar-nav">
-              {this.renderNavigationList('navigationLeft', e => smoothScroll(e))}
+              {this.renderNavigationList('navigationLeft', e => smoothScroll(e, null))}
             </ul>
             <ul className="nav navbar-nav navbar-right">
               {this.renderNavigationList('navigationRight')}
