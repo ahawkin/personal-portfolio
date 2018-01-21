@@ -1,6 +1,7 @@
 import React from 'react';
 import scroll from 'smoothscroll-polyfill';
-import NavigationItem from '../../components/Navigation/NavigationItem';
+import Link from '../../components/Link/Link';
+import NavigationData from '../../../data/navigation.json';
 
 const smoothScroll = (event) => {
   scroll.polyfill();
@@ -23,6 +24,7 @@ export default class Navigation extends React.Component {
 
     this.state = {
       toggled: false,
+      navigation: NavigationData,
     };
 
     this.toggleNavigation = this.toggleNavigation.bind(this);
@@ -50,6 +52,25 @@ export default class Navigation extends React.Component {
     );
   }
 
+  renderNavigationList(navigationId, onClick) {
+    return (
+      this.state.navigation[navigationId].map(navItem => (
+        <li key={navItem.id} className="nav-item">
+          <Link
+            id={navItem.id}
+            href={navItem.href}
+            external={navItem.external}
+            className={navItem.className}
+            onClick={onClick}
+          >
+            {navItem.icon ? <i className={navItem.icon} /> : null}
+            {navItem.content}
+          </Link>
+        </li>
+      ))
+    );
+  }
+
   render() {
     return (
       <nav className="navbar navbar-default navbar-static-top">
@@ -66,12 +87,10 @@ export default class Navigation extends React.Component {
           </div>
           <div id="navbar" className={this.state.toggled ? 'navbar-collapse navbar-collapse--show' : 'navbar-collapse navbar-collapse--hide'}>
             <ul className="nav navbar-nav">
-              <NavigationItem to="#projects" name="Projects" handleEvent={e => smoothScroll(e)} />
-              <NavigationItem to="#about" name="About" handleEvent={e => smoothScroll(e)} />
+              {this.renderNavigationList('navigationLeft', e => smoothScroll(e))}
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <NavigationItem to="http://uk.linkedin.com/in/adamhawkin" icon="fa fa-linkedin-square" external />
-              <NavigationItem to="https://github.com/ahawkin" icon="fa fa-github-square" external />
+              {this.renderNavigationList('navigationRight')}
             </ul>
           </div>
         </div>

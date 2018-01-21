@@ -1,0 +1,38 @@
+{
+    "navigationLeft": [
+        {
+            "id": "Projects",
+            "href": "#projects",
+            "external": false,
+            "className": "nav-item__link",
+            "icon": null,
+            "content": "Projects"
+        },
+        {
+            "id": "About",
+            "href": "#about",
+            "external": false,
+            "className": "nav-item__link",
+            "icon": null,
+            "content": "About"
+        }
+    ],
+    "navigationRight": [
+        {
+            "id": "Linkedin",
+            "href": "http://uk.linkedin.com/in/adamhawkin",
+            "external": true,
+            "className": "nav-item__link",
+            "icon": "fa fa-linkedin-square",
+            "content": null            
+        },
+        {
+            "id": "Github",
+            "href": "https://github.com/ahawkin",
+            "external": true,
+            "className": "nav-item__link",
+            "icon": "fa fa-github-square",
+            "content": null
+        }
+    ]
+}
