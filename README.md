@@ -2,7 +2,7 @@
 
 My personal portfolio website running on GitHub Pages: http://adamhawkin.co.uk/
 
-Built with:
+**Built with:**
 - React.JS
 - SASS
 - Bootstrap 3
