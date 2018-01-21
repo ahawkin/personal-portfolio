@@ -28,7 +28,7 @@ then navigate to `localhost:8080`
 - 100% coverage
 
 ## Linting
-Run `eslint` and `sass-lint`
+To run `eslint` and `sass-lint`
 
     npm run lint
 
