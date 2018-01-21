@@ -16,7 +16,7 @@ Installing global dependencies
     npm install eslint sass-lint -g
 
 ## Development  
-To start `webpack-dev-server` run
+To start locally run
 
     npm run dev
 
@@ -33,7 +33,7 @@ Run `eslint` and `sass-lint`
     npm run lint
 
 ## Build
-To build a production version locally run
+To build a production version run
 
     npm run build
 
