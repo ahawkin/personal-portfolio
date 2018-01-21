@@ -16,7 +16,7 @@ Installing global dependencies
     npm install eslint sass-lint -g
 
 ## Development  
-To start developing run
+To start `webpack-dev-server` run
 
     npm run dev
 
