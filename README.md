@@ -16,8 +16,11 @@ Installing global dependencies
     npm install eslint sass-lint -g
 
 ## Development  
+To start development build run
 
     npm run dev
+
+then navigate to `localhost:8080`
 
 ## Testing
 **Todo**
