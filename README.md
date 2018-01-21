@@ -43,3 +43,5 @@ then navigate to `dist` and open `index.html`
 To build and deploy to production run
 
     npm run deploy
+
+then navigate `http://adamhawkin.co.uk/`
