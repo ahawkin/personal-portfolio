@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../../components/Card/Card';
-import PortfolioTagList from '../../components/Tag/TagList';
+import TagList from '../../components/Tag/TagList';
 import ProjectsData from '../../../data/projects.json';
 
 export default class Projects extends React.Component {
@@ -23,7 +23,7 @@ export default class Projects extends React.Component {
         >
           <h4 className="heading-delta">{project.title}</h4>
           <p>{project.summary}</p>
-          <PortfolioTagList tags={project.tags} />
+          <TagList tags={project.tags} />
           <i className="fa fa-arrow-right" />
         </Card>
       ))
