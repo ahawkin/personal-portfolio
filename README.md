@@ -16,7 +16,7 @@ Installing global dependencies
     npm install eslint sass-lint -g
 
 ## Development  
-To start development build run
+To start developing run
 
     npm run dev
 
