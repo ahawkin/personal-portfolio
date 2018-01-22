@@ -19,7 +19,6 @@ export default class Navigation extends React.Component {
     if (scroll) {
       smoothScroll(e, null);
     }
-    console.log('called');
 
     this.setState(prevState => ({
       toggled: !prevState.toggled,
