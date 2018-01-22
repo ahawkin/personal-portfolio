@@ -2,11 +2,27 @@ $box-shadow-colour-start: rgba(0 , 0, 0, .08);
 $box-shadow-colour-end: rgba(0, 0, 0, .07);
 
 .portfolio {
-  margin-bottom: 112px;
+  margin-bottom: 102px;
 
   &__list,
   &__about {
     margin: 56px auto 0;
+  }
+
+  &__skills {
+    ul {
+      padding: 0 5px;
+    }
+
+    @media(min-width: $breakpoint-medium) {
+      .heading-charlie {
+        margin: 0 0 36px;
+      }
+    }
+  }
+
+  &__cv {
+    margin-top: 31px;
   }
 
   &__card {

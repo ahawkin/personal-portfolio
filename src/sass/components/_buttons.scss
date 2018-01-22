@@ -43,16 +43,6 @@ $box-shadow-colour: rgba(0, 0, 0, .2);
     margin-right: 10px;
   }
 
-  &--last {
-    margin-top: 15px;
-  }
-
-  @media(min-width: 408px) {
-    &--last {
-      margin-top: 0;
-    }
-  }
-
   &:hover {
     -webkit-transform: translateY(-2px);
     box-shadow: 0 6px 25px 0 $box-shadow-colour;

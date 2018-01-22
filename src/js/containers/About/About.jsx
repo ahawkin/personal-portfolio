@@ -19,22 +19,6 @@ export default class About extends React.Component {
     );
   }
 
-  renderContactLinks() {
-    return (
-      this.state.about.contactLinks.map(contactLink => (
-        <Link
-          key={contactLink.id}
-          href={contactLink.href}
-          external={contactLink.external}
-          className={contactLink.className}
-        >
-          {contactLink.content}
-          {contactLink.icon ? <i className={contactLink.icon} /> : null}
-        </Link>
-      ))
-    );
-  }
-
   render() {
     return (
       <section id="about-section" className="portfolio__about container">
@@ -45,34 +29,31 @@ export default class About extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-6 portfolio__intro">
             <h3 className="heading-charlie heading-charlie--bottom">Introduction</h3>
             <p>
               {this.state.about.introduction}
             </p>
-            <br />
-            <Link href="./assets/files/cv.pdf" external className="btn btn--primary">
-              Download CV
-            </Link>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 portfolio__skills">
             <h3 className="heading-charlie">Skills</h3>
-            <div className="col-md-6">
+            <div className="col-sm-6">
               <ul>
                 {this.renderSkills('set1')}
               </ul>
             </div>
-            <div className="col-md-6">
+            <div className="col-sm-6">
               <ul>
                 {this.renderSkills('set2')}
               </ul>
             </div>
           </div>
-          <div className="col-md-6">
-            <h3 className="heading-charlie">Contact</h3>
-            {this.renderContactLinks()}
+        </div>
+        <div className="row">
+          <div className="col-md-12 portfolio__cv">
+            <Link href="./assets/files/cv.pdf" external className="btn btn--primary">
+              Download CV <i className="btn__icon fa fa-file-text" />
+            </Link>
           </div>
         </div>
       </section>

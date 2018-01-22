@@ -17,51 +17,33 @@
       {
         "id": 4,
         "name": "C#"
-      }    
+      },
+      {
+        "id": 5,
+        "name": "ReactJS"
+      }
     ],    
     "set2": [
       {
         "id": 1,
-        "name": "ReactJS"
+        "name": "HTML5"
       },
       {
         "id": 2,
-        "name": "HTML / CSS / SASS"
+        "name": "CSS3"
       },
       {
         "id": 3,
-        "name": "Web Development"
+        "name": "Sass / Less"
       },
       {
         "id": 4,
+        "name": "Web Development"
+      },
+      {
+        "id": 5,
         "name": "Agile"
       }    
     ]
-  },
-  "contactLinks": [
-    {
-      "id": "Linkedin",
-      "href": "https://www.linkedin.com/in/adamhawkin",
-      "external": true,
-      "className": "btn btn--primary btn--inline",
-      "icon": "btn__icon fa fa-linkedin-square",
-      "content": "Linkedin"
-    },
-    {
-      "id": "Github",
-      "href": "https://github.com/ahawkin",
-      "external": true,
-      "className": "btn btn--primary btn--inline",
-      "icon": "btn__icon fa fa-github-square",
-      "content": "Github"
-    },
-    {
-      "id": "Email",
-      "href": "mailto:adamhawkin@hotmail.co.uk",
-      "external": false,
-      "className": "btn btn--primary btn--last",
-      "icon": "btn__icon fa fa-envelope",
-      "content": "Email"
-    }
-  ]
+  }
 }

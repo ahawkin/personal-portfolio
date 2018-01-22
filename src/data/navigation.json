@@ -33,6 +33,14 @@
             "className": "nav-item__link",
             "icon": "fa fa-github-square",
             "content": null
+        },
+        {
+            "id": "Email",
+            "href": "mailto:adamhawkin@hotmail.co.uk",
+            "external": true,
+            "className": "nav-item__link",
+            "icon": "fa fa-envelope",
+            "content": null
         }
     ]
 }
