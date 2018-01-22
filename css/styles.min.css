@@ -93,7 +93,8 @@ p {
     font-size: 18px; }
     .navbar .nav-item__link:hover, .navbar .nav-item__link:focus {
       background-color: transparent;
-      color: #fff; }
+      color: #fff;
+      opacity: .7; }
     .navbar .nav-item__link[class] {
       color: #fff; }
       .navbar .nav-item__link[class]:hover {
