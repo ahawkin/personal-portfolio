@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from '../../components/Link/Link';
-import smoothScroll from '../../helpers/smoothScroll';
+import smoothScroll from '../../utils/smoothScroll';
 import NavigationData from '../../../data/navigation.json';
 
 export default class Navigation extends React.Component {
@@ -15,7 +15,12 @@ export default class Navigation extends React.Component {
     this.toggleNavigation = this.toggleNavigation.bind(this);
   }
 
-  toggleNavigation() {
+  toggleNavigation(e, scroll) {
+    if (scroll) {
+      smoothScroll(e, null);
+    }
+    console.log('called');
+
     this.setState(prevState => ({
       toggled: !prevState.toggled,
     }));
@@ -64,7 +69,7 @@ export default class Navigation extends React.Component {
             <button
               type="button"
               className="navbar-toggle collapsed"
-              onClick={this.toggleNavigation}
+              onClick={e => this.toggleNavigation(e, false)}
             >
               {this.renderButtonIcon()}
             </button>
@@ -72,7 +77,9 @@ export default class Navigation extends React.Component {
           </div>
           <div id="navbar" className={this.state.toggled ? 'navbar-collapse navbar-collapse--show' : 'navbar-collapse navbar-collapse--hide'}>
             <ul className="nav navbar-nav">
-              {this.renderNavigationList('navigationLeft', e => smoothScroll(e, null))}
+              {
+                this.renderNavigationList('navigationLeft', this.state.toggled ? e => this.toggleNavigation(e, true) : e => smoothScroll(e, null))
+              }
             </ul>
             <ul className="nav navbar-nav navbar-right">
               {this.renderNavigationList('navigationRight')}

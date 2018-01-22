@@ -49,6 +49,7 @@ $box-shadow-colour: rgba(0, 0, 0, .2);
       &:focus, {
         background-color: transparent;
         color: $white;
+        opacity: .7;
       }
 
       &[class] {

@@ -1,5 +1,5 @@
 import React from 'react';
-import currentYear from '../../helpers/currentYear';
+import currentYear from '../../utils/currentYear';
 
 const Footer = () => (
   <footer className="footer">

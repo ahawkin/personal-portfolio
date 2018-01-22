@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroSlope from './HeroSlope';
 import Link from '../Link/Link';
-import smoothScroll from '../../helpers/smoothScroll';
+import smoothScroll from '../../utils/smoothScroll';
 
 const Hero = () => (
   <section className="hero">
