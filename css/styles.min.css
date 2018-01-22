@@ -72,8 +72,17 @@ p {
   .navbar.navbar-default {
     background-color: transparent;
     border: 0; }
+  @media (max-width: 768px) {
+    .navbar .navbar-right {
+      border-top: 1px solid #f6f5f3;
+      padding-top: 7px; }
+      .navbar .navbar-right .nav-item {
+        display: inline-block; }
+        .navbar .navbar-right .nav-item__link {
+          padding: 10px 19px; } }
   .navbar .navbar-toggle {
     border: 0;
+    padding: 7.5px 10px;
     z-index: 9999; }
     .navbar .navbar-toggle:hover {
       background-color: transparent; }
