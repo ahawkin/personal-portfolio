@@ -12,8 +12,24 @@ $box-shadow-colour: rgba(0, 0, 0, .2);
     border: 0;
   }
 
+  .navbar-right {
+    @media (max-width: $breakpoint-small) {
+      border-top: 1px solid $brand-border-colour;
+      padding-top: 7px;
+
+      .nav-item {
+        display: inline-block;
+
+        &__link {
+          padding: 10px 19px;
+        }
+      }
+    }
+  }
+
   .navbar-toggle {
     border: 0;
+    padding: 7.5px 10px;
     z-index: 9999;
 
     &:hover {
@@ -92,6 +108,7 @@ $box-shadow-colour: rgba(0, 0, 0, .2);
 
       .nav-item {
         &__link {
+
           &:hover,
           &:focus, {
             color: $black;
