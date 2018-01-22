@@ -282,13 +282,6 @@ p {
 .btn--inline {
   margin-right: 10px; }
 
-.btn--last {
-  margin-top: 15px; }
-
-@media (min-width: 408px) {
-  .btn--last {
-    margin-top: 0; } }
-
 .btn:hover {
   -webkit-transform: translateY(-2px);
   box-shadow: 0 6px 25px 0 rgba(0, 0, 0, 0.2);
@@ -307,9 +300,16 @@ p {
   margin-left: 5px; }
 
 .portfolio {
-  margin-bottom: 112px; }
+  margin-bottom: 102px; }
   .portfolio__list, .portfolio__about {
     margin: 56px auto 0; }
+  .portfolio__skills ul {
+    padding: 0 5px; }
+  @media (min-width: 992px) {
+    .portfolio__skills .heading-charlie {
+      margin: 0 0 36px; } }
+  .portfolio__cv {
+    margin-top: 31px; }
   .portfolio__card {
     -moz-backface-visibility: hidden;
     -moz-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
