@@ -15,9 +15,11 @@ export default class Navigation extends React.Component {
     this.toggleNavigation = this.toggleNavigation.bind(this);
   }
 
-  toggleNavigation(e, scroll) {
+  toggleNavigation(event, scroll) {
+    event.preventDefault();
+
     if (scroll) {
-      smoothScroll(e, null);
+      smoothScroll(event, null);
     }
 
     this.setState(prevState => ({
