@@ -68,6 +68,7 @@ p {
   border-radius: 0;
   margin-bottom: 0;
   padding: 17.5px 0;
+  touch-action: none;
   z-index: 100; }
   .navbar.navbar-default {
     background-color: transparent;
@@ -79,7 +80,8 @@ p {
       .navbar .navbar-right .nav-item {
         display: inline-block; }
         .navbar .navbar-right .nav-item__link {
-          padding: 10px 19px; } }
+          margin-top: 0 !important;
+          padding: 10px 19px !important; } }
   .navbar .navbar-toggle {
     border: 0;
     padding: 7.5px 10px;
@@ -128,12 +130,16 @@ p {
       right: 11px;
       top: 11px;
       width: 180px; }
-      .navbar .navbar-collapse--show .nav-item__link:hover, .navbar .navbar-collapse--show .nav-item__link:focus {
-        color: #333; }
-      .navbar .navbar-collapse--show .nav-item__link[class] {
-        color: #333; }
-        .navbar .navbar-collapse--show .nav-item__link[class]:hover {
+      .navbar .navbar-collapse--show .nav-item__link {
+        margin-top: -2px;
+        padding-bottom: 15px;
+        padding-top: 15px; }
+        .navbar .navbar-collapse--show .nav-item__link:hover, .navbar .navbar-collapse--show .nav-item__link:focus {
           color: #333; }
+        .navbar .navbar-collapse--show .nav-item__link[class] {
+          color: #333; }
+          .navbar .navbar-collapse--show .nav-item__link[class]:hover {
+            color: #333; }
       .navbar .navbar-collapse--show .nav-item i {
         color: #333; } }
   .navbar .navbar-brand {
@@ -425,4 +431,4 @@ p {
       margin: 25px 15px 0 0;
       opacity: .8; }
 
-/*# sourceMappingURL=styles.min.css.map*/
+/*# sourceMappingURL=styles.d4e98d75acd20d52d932.css.map*/
