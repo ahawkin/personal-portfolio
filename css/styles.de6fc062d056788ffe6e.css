@@ -68,7 +68,6 @@ p {
   border-radius: 0;
   margin-bottom: 0;
   padding: 17.5px 0;
-  touch-action: none;
   z-index: 100; }
   .navbar.navbar-default {
     background-color: transparent;
@@ -85,6 +84,7 @@ p {
   .navbar .navbar-toggle {
     border: 0;
     padding: 7.5px 10px;
+    touch-action: none;
     z-index: 9999; }
     .navbar .navbar-toggle:hover {
       background-color: transparent; }
@@ -431,4 +431,4 @@ p {
       margin: 25px 15px 0 0;
       opacity: .8; }
 
-/*# sourceMappingURL=styles.d4e98d75acd20d52d932.css.map*/
+/*# sourceMappingURL=styles.de6fc062d056788ffe6e.css.map*/
