@@ -1,7 +1,7 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var webpack = require('webpack')
-var path = require('path')
+const webpack = require('webpack');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -11,9 +11,9 @@ module.exports = {
     './src/js/index.jsx'
   ],
   output: {
-    path: path.resolve(__dirname, 'js'),
-    filename: 'bundle.js',
-    publicPath: 'js'
+    path: path.resolve(__dirname, '/'),
+    filename: 'js/bundle.[hash].js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -39,6 +39,10 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      inject: false
+    })
   ]
 }

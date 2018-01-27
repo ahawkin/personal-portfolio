@@ -5,6 +5,7 @@ $box-shadow-colour: rgba(0, 0, 0, .2);
   border-radius: 0;
   margin-bottom: 0;
   padding: 17.5px 0;
+  touch-action: none;
   z-index: 100;
 
   &.navbar-default {
@@ -21,7 +22,8 @@ $box-shadow-colour: rgba(0, 0, 0, .2);
         display: inline-block;
 
         &__link {
-          padding: 10px 19px;
+          margin-top: 0 !important;
+          padding: 10px 19px !important;
         }
       }
     }
@@ -108,6 +110,9 @@ $box-shadow-colour: rgba(0, 0, 0, .2);
 
       .nav-item {
         &__link {
+          margin-top: -2px;
+          padding-bottom: 15px;
+          padding-top: 15px;
 
           &:hover,
           &:focus, {
