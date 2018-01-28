@@ -46,6 +46,6 @@ workflows:
       - lint:
           requires:
             - install_deps
-      - build:
+      - build_app:
           requires:
             - lint
