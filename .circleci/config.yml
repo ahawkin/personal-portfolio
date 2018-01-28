@@ -1,0 +1,59 @@
+version: 2
+jobs:
+  install_deps:
+    working_directory: ~/personal-portfolio
+    docker:
+      - image: circleci/node:8.9.4
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install npm packages
+          command: npm install
+      - save_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
+  test_build:
+    working_directory: ~/personal-portfolio
+    docker:
+      - image: circleci/node:8.9.4
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Run Test & Build
+          command: npm run build
+
+  test_build_deploy:
+    working_directory: ~/personal-portfolio
+    docker:
+      - image: circleci/node:8.9.4
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Run Test, Build & Deploy
+          command: npm run deploy
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - install_deps
+      - test_build:
+          requires:
+            - install_deps
+          filters:
+            branches:
+              ignore: master
+      - test_build_deploy:
+          requires:
+            - install_deps
+          filters:
+            branches:
+              only: master
