@@ -15,6 +15,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
+
   lint:
     working_directory: ~/personal-portfolio
     docker:
@@ -26,6 +27,7 @@ jobs:
       - run:
           name: Run Lint
           command: npm run lint
+
   build_app:
       working_directory: ~/personal-portfolio
     docker:
