@@ -1,23 +1,11 @@
 version: 2
 jobs:
-  checkout_code:
-    docker:
-      - image: circleci/node:8.9.4
-    working_directory: ~/personal-portfolio
-    steps:
-      - checkout
-      - save_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - ~/personal-portfolio
-
   install_deps:
     working_directory: ~/personal-portfolio
     docker:
       - image: circleci/node:8.9.4
     steps:
-      - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - checkout
       - restore_cache:
           key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -33,8 +21,7 @@ jobs:
     docker:
       - image: circleci/node:8.9.4
     steps:
-      - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - checkout
       - restore_cache:
           key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -46,8 +33,7 @@ jobs:
     docker:
       - image: circleci/node:8.9.4
     steps:
-      - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - checkout
       - restore_cache:
           key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -58,10 +44,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - checkout_code
-      - install_deps:
-          requires:
-            - checkout_code
+      - install_deps
       - test_build:
           requires:
             - install_deps
