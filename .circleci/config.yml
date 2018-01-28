@@ -16,19 +16,7 @@ jobs:
           paths:
             - node_modules
 
-  lint:
-    working_directory: ~/personal-portfolio
-    docker:
-      - image: circleci/node:8.9.4
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Run Lint
-          command: npm run lint
-
-  build:
+  test_build:
     working_directory: ~/personal-portfolio
     docker:
       - image: circleci/node:8.9.4
@@ -40,14 +28,32 @@ jobs:
           name: Run Build
           command: npm run build
 
+  test_build_deploy:
+    working_directory: ~/personal-portfolio
+    docker:
+      - image: circleci/node:8.9.4
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Run Build
+          command: npm run deploy
+
 workflows:
   version: 2
-  build_test_deploy:
+  build:
     jobs:
       - install_deps
-      - lint:
+      - lint_test_build:
           requires:
             - install_deps
-      - build:
+          filters:
+            branches:
+              ignore: master
+      - lint_test_build_deploy:
           requires:
-            - lint
+            - install_deps
+          filters:
+            branches:
+              only: master
