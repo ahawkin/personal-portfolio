@@ -1,13 +1,25 @@
 version: 2
 jobs:
+  checkout_code:
+    docker:
+      - image: circleci/node:8.9.4
+    working_directory: ~/personal-portfolio
+    steps:
+      - checkout
+      - save_cache:
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ~/personal-portfolio
+
   install_deps:
     working_directory: ~/personal-portfolio
     docker:
       - image: circleci/node:8.9.4
     steps:
-      - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install npm packages
           command: npm install
@@ -21,11 +33,12 @@ jobs:
     docker:
       - image: circleci/node:8.9.4
     steps:
-      - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: Run Build
+          name: Run Test & Build
           command: npm run build
 
   test_build_deploy:
@@ -33,25 +46,29 @@ jobs:
     docker:
       - image: circleci/node:8.9.4
     steps:
-      - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: Run Build
+          name: Run Test, Build & Deploy
           command: npm run deploy
 
 workflows:
   version: 2
   build:
     jobs:
+      - checkout_code
       - install_deps
-      - lint_test_build:
+          requires:
+            - checkout_code
+      - test_build:
           requires:
             - install_deps
           filters:
             branches:
               ignore: master
-      - lint_test_build_deploy:
+      - test_build_deploy:
           requires:
             - install_deps
           filters:
