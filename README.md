@@ -1,5 +1,7 @@
 # Personal Portfolio
 
+[![CircleCI](https://circleci.com/gh/ahawkin/personal-portfolio.svg?style=svg)](https://circleci.com/gh/ahawkin/personal-portfolio)
+
 My personal portfolio website running on GitHub Pages: http://adamhawkin.co.uk/
 
 ## Requirements
