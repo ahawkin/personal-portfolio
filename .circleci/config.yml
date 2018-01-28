@@ -16,6 +16,7 @@ jobs:
           paths:
             - node_modules
   lint:
+    working_directory: ~/personal-portfolio
     docker:
       - image: circleci/node:8.9.4
     steps:
