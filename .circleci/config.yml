@@ -59,7 +59,7 @@ workflows:
   build:
     jobs:
       - checkout_code
-      - install_deps
+      - install_deps:
           requires:
             - checkout_code
       - test_build:
