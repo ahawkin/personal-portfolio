@@ -1,27 +1,73 @@
 version: 2
 
 jobs:
-  build:
+  checkout_code:
+      docker:
+        - image: circleci/node:8.9.4
+      working_directory: ~/personal-portfolio
+      steps:
+        - checkout
+        - save_cache:
+            key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+            paths:
+              - ~/personal-portfolio
+
+  install_dependencies:
     docker:
       - image: circleci/node:7.10
-
-    working_directory: ~/repo
-
+    working_directory: ~/personal-portfolio
     steps:
-      - checkout
-
+      - restore_cache:
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
-
       - run: npm install
-
       - save_cache:
+          key: v1-dependencies-{{ checksum "package.json" }}
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      - run: npm run lint
 
+  lint:
+    docker:
+      - image: circleci/node:7.10
+    working_directory: ~/personal-portfolio
+      - restore_cache:
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run:
+          name: Run lint
+          command: npm run lint
 
+  build:
+    docker:
+      - image: circleci/node:7.10
+    working_directory: ~/personal-portfolio
+      - restore_cache:
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run:
+          name: Run build
+          command: npm run build
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - checkout_code
+      - install_dependencies:
+          requires:
+            - checkout_code
+      - lint:
+          requires:
+            - install_dependencies
+      - build:
+          requires:
+            - lint
