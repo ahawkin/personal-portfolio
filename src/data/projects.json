@@ -25,6 +25,30 @@
     },
     {
         "id": 2,
+        "title": "Heroku Nginx Node",
+        "summary": "An example of using Nginx as a reverse proxy to a node.js Express app on Heroku 16.",
+        "tags": [
+            {
+                "id": 1,
+                "name": "Heroku"
+            },
+            {
+                "id": 2,
+                "name": "Ngnix Proxy"
+            },
+            {
+                "id": 3,
+                "name": "Node.js"
+            }
+        ],
+        "image": {
+            "src": "./assets/img/heroku.png",
+            "alt": "Heroku Nginx Proxy Node"
+        },
+        "link": "https://github.com/ahawkin/heroku-nginx-proxy-node"
+    },
+    {
+        "id": 3,
         "title": "RLNews",
         "summary": "News aggregation website developed for my final project at University.",
         "tags": [
@@ -46,30 +70,6 @@
             "alt": "Rugby league news website"
         },
         "link": "https://github.com/ahawkin/rlnews"
-    },
-    {
-        "id": 3,
-        "title": "Mandelbrot",
-        "summary": "C# Windows Forms Mandelbrot ported over from Java.",
-        "tags": [
-            {
-                "id": 1,
-                "name": "University"
-            },
-            {
-                "id": 2,
-                "name": "C#"
-            },
-            {
-                "id": 3,
-                "name": "WinForms"
-            }
-        ],
-        "image": {
-            "src": "./assets/img/mandelbrot.png",
-            "alt": "Mandelbrot"
-        },
-        "link": "https://github.com/ahawkin/mandelbrot"
     },
     {
         "id": 4,
