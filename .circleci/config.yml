@@ -26,7 +26,7 @@ jobs:
       - run:
           name: Run Lint
           command: npm run lint
-  build:
+  build_app:
       working_directory: ~/personal-portfolio
     docker:
       - image: circleci/node:8.9.4
