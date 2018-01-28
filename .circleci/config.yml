@@ -1,34 +1,37 @@
 version: 2
+
 jobs:
   build:
-    working_directory: ~/personal-portfolio
     docker:
       - image: circleci/node:8.9.4
+
+    working_directory: ~/personal-portfolio
+
     steps:
       - checkout
+
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+
       - run:
           name: Install npm packages
           command: npm install
+
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-  lint:
-    docker:
-      - image: circleci/node:8.9.4
-    steps:
-      - checkout
+          key: v1-dependencies-{{ checksum "package.json" }}
+        
       - run:
-          name: Lint
+          name: Run lint
           command: npm run lint
 
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
-      - lint:
-          requires:
-            - build
+      - run:
+          name: Run Build
+          command: npm run lint
+          filters:
+            branches:
+              only: master
+
+
