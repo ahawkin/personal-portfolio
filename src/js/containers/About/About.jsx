@@ -51,9 +51,9 @@ export default class About extends React.Component {
         </div>
         <div className="row">
           <div className="col-md-12 portfolio__cv">
-            <Link href="./assets/files/cv.pdf" external className="btn btn--primary">
-              Download CV <i className="btn__icon fa fa-file-text" />
-            </Link>
+    <Link href="./assets/files/cv.pdf" external className="btn btn--primary">
+      Download CV <i className="btn__icon fa fa-file-text" />
+    </Link>
           </div>
         </div>
       </section>
