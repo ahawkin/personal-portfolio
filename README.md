@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-[![CircleCI](https://circleci.com/gh/ahawkin/personal-portfolio.svg?style=svg)](https://circleci.com/gh/ahawkin/personal-portfolio)
+[![CircleCI](https://circleci.com/gh/ahawkin/personal-portfolio/tree/master.svg?style=shield&circle-token=51c1272168ded9e1a7db6f09befdd249e32bbc2d)](https://circleci.com/gh/ahawkin/personal-portfolio/tree/master)
 
 My personal portfolio website running on GitHub Pages: http://adamhawkin.co.uk/
 
@@ -41,7 +41,11 @@ To build a production version run
 
 then navigate to `dist` and open `index.html`
 
-## Deploy
-To build and deploy to production run
+## CI & Deployment
+For `feature` branches CircleCI is used to test and build the project.
+
+If changes are made to the `master` branch then CirleCI will test, build and then deploy a new version to the `gh-pages` branch automatically.
+
+Deployment can also be done manually by running
 
     npm run deploy

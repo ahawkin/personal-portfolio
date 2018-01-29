@@ -9,6 +9,7 @@ const copyFiles = () => {
   const cname = fs.copy(path.resolve(__dirname, '../config/CNAME'), path.resolve(__dirname, '../dist/CNAME'));
   const files = fs.copy(path.resolve(__dirname, '../assets/files'), path.resolve(__dirname, '../dist/assets/files'));
   const images = fs.copy(path.resolve(__dirname, '../assets/img'), path.resolve(__dirname, '../dist/assets/img'));
+  const circleci = fs.copy(path.resolve(__dirname, '../circleci'), path.resolve(__dirname, '../dist/circleci'));
 
   return Promise.all([
     favicon,
@@ -16,6 +17,7 @@ const copyFiles = () => {
     cname,
     files,
     images,
+    circleci,
   ]);
 };
 
