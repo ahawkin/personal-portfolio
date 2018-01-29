@@ -24,9 +24,6 @@ jobs:
       - checkout
       - restore_cache:
           key: v1-dependency-cache-{{ checksum "package.json" }}
-      # - run:
-      #     name: Install global npm packages  
-      #     command: sudo npm install eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react sass-lint -g
       - run:
           name: Run Test & Build
           command: npm run build
