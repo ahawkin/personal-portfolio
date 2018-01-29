@@ -33,12 +33,12 @@ jobs:
     docker:
       - image: circleci/node:8.9.4
     steps:
-      - checkout
-      - restore_cache:
-          key: v1-dependency-cache-{{ checksum "package.json" }}
       - add_ssh_keys:
           fingerprints:
             - $GH_KEY
+      - checkout
+      - restore_cache:
+          key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: GitHub Details
           command: |
