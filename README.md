@@ -42,9 +42,7 @@ To build a production version run
 then navigate to `dist` and open `index.html`
 
 ## CI & Deployment
-For `feature` branches CircleCI is used to test and build the project.
-
-If changes are made to the `master` branch then CirleCI will test, build and then deploy a new version to the `gh-pages` branch automatically.
+CirleCI is used to test, build and then deploy a new version to the `gh-pages` branch automatically when changes are made to `master`. For `pull requests` only the test and build stages are run.
 
 Deployment can also be done manually by running
 
