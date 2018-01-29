@@ -15,8 +15,7 @@ const copyFiles = () => {
     manifest,
     cname,
     files,
-    images,
-    test
+    images
   ]);
 };
 
