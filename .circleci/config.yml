@@ -9,6 +9,9 @@ jobs:
       - restore_cache:
           key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
+          name: Install global npm packages  
+          command: npm install eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react sass-lint -g
+      - run:
           name: Install npm packages
           command: npm install
       - save_cache:
@@ -52,13 +55,19 @@ workflows:
   version: 2
   build:
     jobs:
-      - install_deps
+      - install_deps:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - test_build:
           requires:
             - install_deps
           filters:
             branches:
-              ignore: master
+              ignore: 
+                - master
+                - gh-pages
       - test_build_deploy:
           requires:
             - install_deps
