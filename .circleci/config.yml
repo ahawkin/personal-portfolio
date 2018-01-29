@@ -38,9 +38,9 @@ jobs:
           key: v1-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: GitHub Details
-          command:
-            - git config --global user.email $GH_EMAIL
-            - git config --global user.name $GH_NAME
+          command: |
+              git config --global user.email $GH_EMAIL
+              git config --global user.name $GH_NAME
       - run:
           name: Run Test, Build & Deploy
           command: npm run deploy
