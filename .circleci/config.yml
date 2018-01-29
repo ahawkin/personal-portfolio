@@ -35,7 +35,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - $GH_KEY
+            - "56:19:14:0e:a5:ab:91:75:01:0b:eb:ca:14:6d:f3:b6"
       - checkout
       - restore_cache:
           key: v1-dependency-cache-{{ checksum "package.json" }}
