@@ -52,11 +52,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - install_deps:
-          filters:
-            branches:
-              ignore:
-                - gh-pages
+      - install_deps
       - test_build:
           requires:
             - install_deps
@@ -64,7 +60,6 @@ workflows:
             branches:
               ignore: 
                 - master
-                - gh-pages
       - test_build_deploy:
           requires:
             - install_deps

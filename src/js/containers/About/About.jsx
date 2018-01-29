@@ -14,7 +14,9 @@ export default class About extends React.Component {
   renderSkills(setId) {
     return (
       this.state.about.skills[setId].map(skill => (
-        <li key={skill.id}>{skill.name}</li>
+        <li key={skill.id}>
+          {skill.name}
+        </li>
       ))
     );
   }
