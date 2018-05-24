@@ -1,19 +1,19 @@
-.heading-alpha {
+.heading-a {
   font-size: 62px; }
 
-.heading-bravo {
+.heading-b {
   font-size: 48px; }
 
-.heading-charlie {
+.heading-c {
   font-size: 36px;
   margin: 36px 0; }
-  .heading-charlie--bottom {
+  .heading-c--bottom {
     margin: 0 0 36px; }
 
-.heading-delta {
+.heading-d {
   font-size: 20px; }
   @media (min-width: 480px) {
-    .heading-delta {
+    .heading-d {
       font-size: 28px; } }
 
 body {
@@ -321,7 +321,7 @@ p {
   .portfolio__skills ul {
     padding: 0 5px; }
   @media (min-width: 992px) {
-    .portfolio__skills .heading-charlie {
+    .portfolio__skills .heading-c {
       margin: 0 0 36px; } }
   .portfolio__cv {
     margin-top: 31px; }
@@ -431,4 +431,4 @@ p {
       margin: 25px 15px 0 0;
       opacity: .8; }
 
-/*# sourceMappingURL=styles.363cd51bbff046389ff9.css.map*/
+/*# sourceMappingURL=styles.1dfe37429148db6f71b4.css.map*/
