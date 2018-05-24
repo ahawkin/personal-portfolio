@@ -21,7 +21,7 @@ export default class Projects extends React.Component {
           imageAlt={project.image.alt}
           to={project.link}
         >
-          <h4 className="heading-delta">{project.title}</h4>
+          <h4 className="heading-d">{project.title}</h4>
           <p>{project.summary}</p>
           <TagList tags={project.tags} />
           <i className="fa fa-arrow-right" />
@@ -35,7 +35,7 @@ export default class Projects extends React.Component {
       <section id="projects-section" className="portfolio__list container">
         <div className="row">
           <div className="col-md-12">
-            <h2 className="heading-bravo portfolio__heading">Projects</h2>
+            <h2 className="heading-b portfolio__heading">Projects</h2>
             <div className="divider divider--light divider--right" />
           </div>
         </div>

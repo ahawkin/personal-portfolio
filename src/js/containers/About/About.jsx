@@ -24,19 +24,19 @@ export default class About extends React.Component {
       <section id="about-section" className="portfolio__about container">
         <div className="row">
           <div className="col-md-12">
-            <h2 className="heading-bravo portfolio__heading--left">About Me</h2>
+            <h2 className="heading-b portfolio__heading--left">About Me</h2>
             <div className="divider divider--light divider--left" />
           </div>
         </div>
         <div className="row">
           <div className="col-md-6 portfolio__intro">
-            <h3 className="heading-charlie heading-charlie--bottom">Introduction</h3>
+            <h3 className="heading-c heading-c--bottom">Introduction</h3>
             <p>
               {this.state.about.introduction}
             </p>
           </div>
           <div className="col-md-6 portfolio__skills">
-            <h3 className="heading-charlie">Skills</h3>
+            <h3 className="heading-c">Skills</h3>
             <div className="col-sm-6">
               <ul>
                 {this.renderSkills('set1')}
