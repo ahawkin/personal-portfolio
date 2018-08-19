@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/ahawkin/personal-portfolio/tree/master.svg?style=shield&circle-token=51c1272168ded9e1a7db6f09befdd249e32bbc2d)](https://circleci.com/gh/ahawkin/personal-portfolio/tree/master)
 
-My personal portfolio website running on GitHub Pages: http://adamhawkin.co.uk/
+My personal portfolio website running on GitHub Pages: https://adamhawkin.co.uk/
 
 ## Requirements
 - Node ~8.9
