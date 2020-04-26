@@ -45,7 +45,7 @@
             "src": "./assets/img/heroku.png",
             "alt": "Heroku Nginx Proxy Node"
         },
-        "link": "https://heroku-nginx-proxy-node.herokuapp.com"
+        "link": "https://github.com/ahawkin/heroku-nginx-proxy-node"
     },
     {
         "id": 3,
