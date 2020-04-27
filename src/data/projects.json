@@ -1,30 +1,6 @@
 [
     {
         "id": 1,
-        "title": "UK COVID Update",
-        "summary": "Dashboard for tracking Coronavirus (COVID-19) cases and deaths in the UK",
-        "tags": [
-            {
-                "id": 1,
-                "name": "Next.js"
-            },
-            {
-                "id": 2,
-                "name": "Styled JSX"
-            },
-            {
-                "id": 3,
-                "name": "Heroku"
-            }
-        ],
-        "image": {
-            "src": "./assets/img/react.png",
-            "alt": "UK COVID Update"
-        },
-        "link": "https://uk-covid-update.herokuapp.com/"
-    },
-    {
-        "id": 2,
         "title": "Personal Portfolio",
         "summary": "This website. Built to practice some React.js, Jest, SASS and try out GitHub Pages.",
         "tags": [
@@ -48,7 +24,7 @@
         "link": "https://github.com/ahawkin/personal-portfolio"
     },
     {
-        "id": 3,
+        "id": 2,
         "title": "Heroku Nginx Node",
         "summary": "An example of using Nginx as a reverse proxy to a node.js Express app on Heroku 16.",
         "tags": [
@@ -72,7 +48,7 @@
         "link": "https://github.com/ahawkin/heroku-nginx-proxy-node"
     },
     {
-        "id": 4,
+        "id": 3,
         "title": "RLNews",
         "summary": "News aggregation website developed for my final project at University.",
         "tags": [
@@ -96,7 +72,7 @@
         "link": "https://github.com/ahawkin/rlnews"
     },
     {
-        "id": 5,
+        "id": 4,
         "title": "Tapfish",
         "summary": "Tapfish is an Android game that was developed during my second year of University.",
         "tags": [
