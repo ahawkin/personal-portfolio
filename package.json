@@ -20,7 +20,7 @@
     "css-loader": "^0.28.7",
     "fs-extra": "^5.0.0",
     "gh-pages": "^1.1.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.13.1",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
